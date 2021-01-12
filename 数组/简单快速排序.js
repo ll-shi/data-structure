@@ -13,7 +13,7 @@ function quickSort(arr){
     left = quickSort(left);
     right = quickSort(right);
     // 这里因为更改了arr的引用值，所以上面必须加上left = ...; right = ...; 
-    arr = left.concat([leader]).concat(right);
+    arr = [...left,leader,...right];
     return arr;
 }
 
